@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  @apply h-screen text-white;
+}
+
+body {
+  @apply bg-gunmetal;
+}
+
+#__next {
+  @apply h-screen flex flex-col;
+}
+
+a,
+a:visited {
+  @apply px-3 inline-block text-center align-middle text-white uppercase;
+}
