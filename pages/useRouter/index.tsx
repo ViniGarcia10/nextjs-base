@@ -14,7 +14,7 @@ const InitPageRoute = () => {
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, []);
+  }, [router]);
 
   return (
     <div>
