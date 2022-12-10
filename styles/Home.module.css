@@ -127,3 +127,11 @@
     filter: invert(1);
   }
 }
+
+.HomeContainer {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
