@@ -4,7 +4,7 @@ type PropsTodo = {
   todoList: Todo[];
 };
 
-const Todo = ({ todoList }: PropsTodo) => {
+const TodoPage = ({ todoList }: PropsTodo) => {
   return (
     <div>
       <h1>Lista de Tarefas</h1>
@@ -20,7 +20,7 @@ const Todo = ({ todoList }: PropsTodo) => {
   );
 };
 
-export default Todo;
+export default TodoPage;
 
 export const getServerSideProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos");

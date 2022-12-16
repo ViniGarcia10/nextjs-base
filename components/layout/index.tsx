@@ -11,8 +11,8 @@ export const Layout = ({ children }: PropsLayout) => {
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>Meu Projeto</h1>
+        <NavBar />
       </header>
-      <NavBar />
 
       <main className={styles.main}>{children}</main>
 

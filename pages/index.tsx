@@ -1,10 +1,15 @@
+/* eslint-disable @next/next/no-page-custom-font */
+import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
+import { ButtonSubmit } from "../components/Button";
 import { Layout } from "../components/layout";
 import ImageGitHUb from "../public/card-github.png";
 import HomeStyle from "../styles/Home.module.css";
 
 const PageMain = () => {
+  const { data: session } = useSession();
+
   return (
     <Layout>
       <div className={HomeStyle.HomeContainer}>
@@ -47,20 +52,30 @@ const PageMain = () => {
           />
         </Head>
 
-        <h1>Página inicial</h1>
+        {(!session && (
+          <>
+            <h1>Realizar Login</h1>
+            <ButtonSubmit onClick={() => signIn()} title={"Login"} />
+          </>
+        )) || (
+          <>
+            <h1>Bem vindo, {session?.user?.name}!</h1>
+            <Image
+              alt="Imagem GitHub"
+              src={ImageGitHUb}
+              priority={true}
+              height={400}
+              width={250}
+              onClick={() => {
+                window.open("http://localhost:3000/card-github.png/", "_blank");
+              }}
+            />
 
-        <Image
-          alt="Imagem GitHub"
-          src={ImageGitHUb}
-          priority={false}
-          height={400}
-          width={250}     
-          onClick={() => {
-            window.open("http://localhost:3000/card-github.png/", "_blank");
-          }}
-        />
-
-        <button className="btn btn-primary">Entrar</button>
+            <button className="btn btn-danger" onClick={() => signOut()}>
+              Sair
+            </button>
+          </>
+        )}
       </div>
     </Layout>
   );

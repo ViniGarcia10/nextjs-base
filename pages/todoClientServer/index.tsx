@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Todo } from "../../@types/Todo";
 
-const Todo = () => {
+const TodoListPage = () => {
   const [TodoList, setTodoList] = useState<Todo[]>([]);
   const [Loading, setLoading] = useState(true);
 
@@ -43,4 +43,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default TodoListPage;

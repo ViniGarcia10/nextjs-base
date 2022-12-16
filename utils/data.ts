@@ -7,4 +7,6 @@ export const NavigationLinks = [
   { label: "useRouter", path: "/useRouter" },
   { label: "useRouterPedro", path: "/useRouter/pedro" },
   { label: "useScript", path: "/useScript" },
+  { label: "Usuários Client", path: "/usuariosWithClientSide" },
+  { label: "Usuário Server", path: "/usuariosWithServerSide" },
 ];
