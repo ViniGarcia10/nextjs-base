@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "@prisma/client": "^4.7.1",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
     "@types/uuid": "^9.0.0",
+    "cypress": "^12.1.0",
     "prettier-plugin-prisma": "^4.4.0",
     "prisma": "^4.7.1"
   }

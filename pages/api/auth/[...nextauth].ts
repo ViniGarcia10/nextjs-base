@@ -48,14 +48,12 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     jwt: async ({ token, user }) => {
-      console.log("token", token, "user", user);
       if (user) {
         token.user = user;
       }
       return token;
     },
     session: async ({ session, token }) => {
-      console.log("session: ", session, "token: ", token);
       if (token) {
         session.user = token.user as AuthUser;
       }

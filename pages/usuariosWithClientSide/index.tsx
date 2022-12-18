@@ -66,7 +66,9 @@ const ListUsers = ({ users }: PropsUsers) => {
 
         {SessionStatus === "authenticated" && (
           <>
-            <h1>Lista de Usuário</h1>
+            <h1>
+              Lista de Usuário com <strong>{listUsers.length}</strong> pessoas
+            </h1>
             <Link href={"/usuariosWithClientSide/newUserClient"}>
               <ButtonSubmit title="Novo Usuário" />
             </Link>
